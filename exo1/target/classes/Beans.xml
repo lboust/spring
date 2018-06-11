@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+   <context:annotation-config/>
+
+<!--   <bean id="p1" class="hello.Person">
+      <property name = "name" value = "toto"/>
+      <property name = "age" value = "4"/>
+  </bean>
+  
+  <bean id="p2" class="hello.Person">
+      <property name = "name" value = "Muxu"/>
+      <property name = "age" value = "3"/>
+  </bean>-->
+   
+     <bean id="p3" class="hello.Person">  </bean> 
+  <bean id="name" class="java.lang.String">
+  	<constructor-arg value="TOTO"/>
+  </bean> 
+    <bean id="age" class="java.lang.Integer">
+  	<constructor-arg value="100"/>
+  </bean>
+ 
+</beans>

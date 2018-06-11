@@ -1,0 +1,12 @@
+.form {
+	border: 3px lightblue solid ;
+	width: 200px;
+	margin: 10px;
+	font-size: 1.2rem;
+	background-color: rgb(100, 143, 143);
+}
+.button    {
+	margin: 5px;
+    align-items: center;
+	
+}
