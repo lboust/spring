@@ -21,6 +21,7 @@ public class Principal {
 				compteur=0;
 			} else {
 				compteur++;
+
 			}
 			System.out.println(compteur);
 		}

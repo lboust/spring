@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Angular JS</title>
+</head>
+<body>
+<h2>Client REST</h2>
+
+<div ng-app="monapp" ng-controller="monController">
+
+      {{compteurs}}
+    
+    <table border='1'>
+    <tr ng-repeat="(user,compteur) in compteurs">
+<!--     <tr ng-repeat="compteur in compteurs"> -->
+        <td>
+            {{user}}
+        </td>
+        <td>
+            {{compteur}}
+        </td>
+    </tr>
+    </table>
+    
+</div>
+<script>
+var monapp = angular.module("monapp", []);
+monapp.controller("monController", function($scope, $interval) {
+    $scope.compteurs=[]
+    $interval( function(){
+         $.get("http://10.130.10.37:8080/exo7_rest/getcompteurs", function(data, status){
+            console.log(data);
+           $scope.compteurs=data
+//             for (d in data)
+//             {
+//             	var compteur={}
+//             	compteur.user = d
+//             	compteur.compteur = data [d]
+//             	$scope.compteurs.push (compteur)
+//             }
+        });
+   }, 200);
+});
+</script>
+</body>
+</html>
